@@ -18,6 +18,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    transition: all 0.3s ease 0s;
 
     &:hover {
       background-color: #f1fcff;
@@ -31,7 +32,7 @@
 
       &:checked ~ .checkbox {
         border-color: #2196f3;
-        background: url(./src/assets/check.svg) center center no-repeat;
+        background: url(./images/check.svg) center center no-repeat;
       }
 
       &:focus ~ .checkbox {

@@ -12,7 +12,7 @@ function App() {
     <div className="container">
       <header>
         <a href="" className="logo">
-          <img src="./src/assets/logo.svg" alt="logo" />
+          <img src="./images/logo.svg" alt="logo" />
         </a>
       </header>
       <main className="main-wrapper">

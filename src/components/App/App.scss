@@ -1,0 +1,20 @@
+header {
+  margin-bottom: 35px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 82px;
+
+  img {
+    object-fit: cover;
+    height: 89px;
+    width: 100%;
+  }
+}
+
+.main-wrapper {
+  display: flex;
+  gap: 20px;
+}

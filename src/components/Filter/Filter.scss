@@ -32,7 +32,7 @@
 
       &:checked ~ .checkbox {
         border-color: #2196f3;
-        background: url(./images/check.svg) center center no-repeat;
+        background: url(../images/check.svg) center center no-repeat;
       }
 
       &:focus ~ .checkbox {

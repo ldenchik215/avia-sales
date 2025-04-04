@@ -1,12 +1,11 @@
 .sort-wrapper {
-  width: 502px;
+  max-width: 502px;
   height: 50px;
   display: flex;
 
   label {
     background-color: #fff;
-    flex-grow: 1;
-    //flex-shrink: 1;
+    flex: 0 1 33.33%;
     cursor: pointer;
 
     span {
@@ -50,8 +49,9 @@
         background-color: #f1fcff;
       }
 
-      &:checked ~ span:hover {
-        background-color: #2a9af3;
+      &:checked ~ span:hover,
+      &:checked:focus-visible ~ span {
+        background-color: #2164f3;
       }
     }
   }

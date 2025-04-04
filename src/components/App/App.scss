@@ -1,5 +1,9 @@
 header {
   margin-bottom: 30px;
+
+  @media (max-width: 590px) {
+    margin-bottom: 0;
+  }
 }
 
 .logo {
@@ -17,4 +21,22 @@ header {
 .main-wrapper {
   display: flex;
   gap: 20px;
+  align-items: start;
+
+  @media (max-width: 590px) {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+}
+
+.ticket-list-wrapper {
+  flex: 0 1 502px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: 590px) {
+    gap: 10px;
+  }
 }

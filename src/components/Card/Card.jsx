@@ -21,12 +21,12 @@ export default function Card() {
           <div className="data">HKG, JNB</div>
         </div>
         <div className="data-ticket">
-          <div className="header"></div>
-          <div className="header"></div>
-          <div className="header"></div>
-          <div className="data"></div>
-          <div className="data"></div>
-          <div className="data"></div>
+          <div className="header">MOW – HKT</div>
+          <div className="header">В ПУТИ</div>
+          <div className="header">2 ПЕРЕСАДКИ</div>
+          <div className="data">10:45 – 08:00</div>
+          <div className="data">21ч 15м</div>
+          <div className="data">HKG, JNB, JNB, JNB</div>
         </div>
       </div>
     </li>

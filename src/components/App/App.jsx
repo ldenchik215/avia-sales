@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 import './App.scss'
 import Filter from '../Filter/Filter'
@@ -6,7 +7,7 @@ import Sort from '../Sort/Sort'
 import CardList from '../CardList/CardList'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const dispatch = useDispatch()
 
   return (
     <div className="container">

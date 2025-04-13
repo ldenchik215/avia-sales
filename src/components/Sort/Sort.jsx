@@ -1,25 +1,23 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-
-import { changeSort } from '../../redux/filterSlice'
 
 import './Sort.scss'
+import { useActions } from '../../hooks/useActions'
 
 export default function Sort() {
-  const dispatch = useDispatch()
+  const { changeSort } = useActions()
 
   return (
     <div className="sort-wrapper">
       <label className="active">
-        <input type="radio" name="sorting" id="" defaultChecked onChange={() => dispatch(changeSort('asc'))} />
+        <input type="radio" name="sorting" id="" defaultChecked onChange={() => changeSort('price')} />
         <span>САМЫЙ ДЕШЕВЫЙ</span>
       </label>
       <label>
-        <input type="radio" name="sorting" id="" onChange={() => dispatch(changeSort('faster'))} />
+        <input type="radio" name="sorting" id="" onChange={() => changeSort('faster')} />
         <span>САМЫЙ БЫСТРЫЙ</span>
       </label>
       <label>
-        <input type="radio" name="sorting" id="" onChange={() => dispatch(changeSort('optim'))} />
+        <input type="radio" name="sorting" id="" onChange={() => changeSort('optimal')} />
         <span>ОПТИМАЛЬНЫЙ</span>
       </label>
     </div>

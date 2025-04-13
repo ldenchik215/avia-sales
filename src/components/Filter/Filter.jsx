@@ -1,10 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import './Filter.scss'
-import { clickCheckAll, clickUncheckAll, toggleFilter, selectFilters } from '../../redux/filterSlice'
+import { selectFilters } from '../../redux/filters/filterSlice'
+import { useActions } from '../../hooks/useActions'
 
 export default function Filter() {
-  const dispatch = useDispatch()
+  const { clickCheckAll, clickUncheckAll, toggleFilter } = useActions()
   const filterState = useSelector(selectFilters)
 
   return (
@@ -17,7 +18,7 @@ export default function Filter() {
               type="checkbox"
               name="filter"
               checked={filterState.all}
-              onChange={(e) => (e.target.checked ? dispatch(clickCheckAll()) : dispatch(clickUncheckAll()))}
+              onChange={(e) => (e.target.checked ? clickCheckAll() : clickUncheckAll())}
             />
             <span className="checkbox" />
             Все
@@ -29,7 +30,7 @@ export default function Filter() {
               type="checkbox"
               name="filter"
               checked={filterState.withoutStops}
-              onChange={() => dispatch(toggleFilter('withoutStops'))}
+              onChange={() => toggleFilter('withoutStops')}
             />
             <span className="checkbox" />
             Без пересадок
@@ -37,34 +38,19 @@ export default function Filter() {
         </li>
         <li className="filter-item">
           <label>
-            <input
-              type="checkbox"
-              name="filter"
-              checked={filterState.stops1}
-              onChange={() => dispatch(toggleFilter('stops1'))}
-            />
+            <input type="checkbox" name="filter" checked={filterState.stops1} onChange={() => toggleFilter('stops1')} />
             <span className="checkbox" />1 пересадка
           </label>
         </li>
         <li className="filter-item">
           <label>
-            <input
-              type="checkbox"
-              name="filter"
-              checked={filterState.stops2}
-              onChange={() => dispatch(toggleFilter('stops2'))}
-            />
+            <input type="checkbox" name="filter" checked={filterState.stops2} onChange={() => toggleFilter('stops2')} />
             <span className="checkbox" />2 пересадки
           </label>
         </li>
         <li className="filter-item">
           <label>
-            <input
-              type="checkbox"
-              name="filter"
-              checked={filterState.stops3}
-              onChange={() => dispatch(toggleFilter('stops3'))}
-            />
+            <input type="checkbox" name="filter" checked={filterState.stops3} onChange={() => toggleFilter('stops3')} />
             <span className="checkbox" />3 пересадки
           </label>
         </li>

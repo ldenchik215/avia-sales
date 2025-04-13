@@ -1,18 +1,24 @@
-import { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useEffect } from 'react'
 
 import './App.scss'
 import Filter from '../Filter/Filter'
 import Sort from '../Sort/Sort'
 import CardList from '../CardList/CardList'
+import { useActions } from '../../hooks/useActions'
 
 function App() {
-  const dispatch = useDispatch()
+  const { setOnlineStatus } = useActions()
+
+  useEffect(() => {
+    window.addEventListener('online', () => setOnlineStatus())
+    window.addEventListener('offline', () => setOnlineStatus())
+  }, [])
 
   return (
     <div className="container">
       <header>
-        <a href="" className="logo">
+        <a href="./" className="logo">
           <img src="./images/logo.svg" alt="logo" />
         </a>
       </header>
